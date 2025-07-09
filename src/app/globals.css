@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@layer base {
+  html {
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+  
+  body {
+    @apply bg-white text-gray-900 antialiased;
+  }
+}
+
+@layer components {
+  .nav-link {
+    @apply text-gray-700 hover:text-gray-900 transition-colors duration-200 font-medium;
+  }
+  
+  .hero-text {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  .thumbnail-border {
+    stroke-dasharray: 100%;
+    stroke-dashoffset: 100%;
+    transition: stroke-dashoffset 0.3s ease;
+  }
+  
+  .thumbnail-border.active {
+    animation: borderFill var(--duration, 5s) linear forwards;
+  }
+  
+  .slide-enter {
+    opacity: 0;
+    transform: scale(1.1);
+  }
+  
+  .slide-enter-active {
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+  }
+  
+  .slide-exit {
+    opacity: 1;
+    transform: scale(1);
+  }
+  
+  .slide-exit-active {
+    opacity: 0;
+    transform: scale(0.95);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+}

@@ -373,6 +373,16 @@ eval("\nObject.defineProperty(exports, \"__esModule\", ({\n    value: true\n}));
 
 /***/ }),
 
+/***/ "(rsc)/./node_modules/next/font/google/target.css?{\"path\":\"src\\\\app\\\\layout.jsx\",\"import\":\"Work_Sans\",\"arguments\":[{\"subsets\":[\"latin\"],\"weight\":[\"400\",\"500\",\"600\",\"700\"],\"variable\":\"--font-work-sans\"}],\"variableName\":\"workSans\"}":
+/*!**************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/next/font/google/target.css?{"path":"src\\app\\layout.jsx","import":"Work_Sans","arguments":[{"subsets":["latin"],"weight":["400","500","600","700"],"variable":"--font-work-sans"}],"variableName":"workSans"} ***!
+  \**************************************************************************************************************************************************************************************************************************************/
+/***/ ((module) => {
+
+eval("// Exports\nmodule.exports = {\n\t\"style\": {\"fontFamily\":\"'__Work_Sans_e75544', '__Work_Sans_Fallback_e75544'\",\"fontStyle\":\"normal\"},\n\t\"className\": \"__className_e75544\",\n\t\"variable\": \"__variable_e75544\"\n};\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKHJzYykvLi9ub2RlX21vZHVsZXMvbmV4dC9mb250L2dvb2dsZS90YXJnZXQuY3NzP3tcInBhdGhcIjpcInNyY1xcXFxhcHBcXFxcbGF5b3V0LmpzeFwiLFwiaW1wb3J0XCI6XCJXb3JrX1NhbnNcIixcImFyZ3VtZW50c1wiOlt7XCJzdWJzZXRzXCI6W1wibGF0aW5cIl0sXCJ3ZWlnaHRcIjpbXCI0MDBcIixcIjUwMFwiLFwiNjAwXCIsXCI3MDBcIl0sXCJ2YXJpYWJsZVwiOlwiLS1mb250LXdvcmstc2Fuc1wifV0sXCJ2YXJpYWJsZU5hbWVcIjpcIndvcmtTYW5zXCJ9IiwibWFwcGluZ3MiOiJBQUFBO0FBQ0E7QUFDQSxXQUFXLHdGQUF3RjtBQUNuRztBQUNBO0FBQ0EiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly90ZW50d2VudHktZmFybS1zbGlkZXIvLi9ub2RlX21vZHVsZXMvbmV4dC9mb250L2dvb2dsZS90YXJnZXQuY3NzPzVmN2EiXSwic291cmNlc0NvbnRlbnQiOlsiLy8gRXhwb3J0c1xubW9kdWxlLmV4cG9ydHMgPSB7XG5cdFwic3R5bGVcIjoge1wiZm9udEZhbWlseVwiOlwiJ19fV29ya19TYW5zX2U3NTU0NCcsICdfX1dvcmtfU2Fuc19GYWxsYmFja19lNzU1NDQnXCIsXCJmb250U3R5bGVcIjpcIm5vcm1hbFwifSxcblx0XCJjbGFzc05hbWVcIjogXCJfX2NsYXNzTmFtZV9lNzU1NDRcIixcblx0XCJ2YXJpYWJsZVwiOiBcIl9fdmFyaWFibGVfZTc1NTQ0XCJcbn07XG4iXSwibmFtZXMiOltdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///(rsc)/./node_modules/next/font/google/target.css?{\"path\":\"src\\\\app\\\\layout.jsx\",\"import\":\"Work_Sans\",\"arguments\":[{\"subsets\":[\"latin\"],\"weight\":[\"400\",\"500\",\"600\",\"700\"],\"variable\":\"--font-work-sans\"}],\"variableName\":\"workSans\"}\n");
+
+/***/ }),
+
 /***/ "(ssr)/./node_modules/next/dist/client/add-base-path.js":
 /*!********************************************************!*\
   !*** ./node_modules/next/dist/client/add-base-path.js ***!

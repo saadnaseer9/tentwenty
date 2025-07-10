@@ -30,11 +30,8 @@ const SLIDE_DATA = [
 // Constants for better maintainability
 const PROGRESS_INCREMENT = 2; // 2% every 100ms
 const PROGRESS_INTERVAL = 100; // 100ms
-const ANIMATION_DURATION = 1000; // 1 second
-const CONTENT_ANIMATION_DURATION = 800; // 0.8 seconds
-const SLIDE_DURATION = 5000; // 5 seconds total (100 * 50 = 5000ms)
 
-// Reusable component for background slide
+// component for background slide
 const BackgroundSlide = ({ slide, isActive }) => (
   <div
     key={slide.id}
@@ -51,7 +48,7 @@ const BackgroundSlide = ({ slide, isActive }) => (
   </div>
 );
 
-// Reusable component for slide content
+//  component for slide content
 const SlideContent = ({ slide, isActive }) => (
   <div
     key={slide.id}
@@ -83,7 +80,7 @@ const SlideContent = ({ slide, isActive }) => (
   </div>
 );
 
-// Reusable component for progress ring
+//  component for progress ring
 const ProgressRing = ({ progress }) => (
   <svg className="absolute inset-0 w-full h-full z-10" viewBox="0 0 120 120">
     <rect
@@ -111,7 +108,7 @@ const ProgressRing = ({ progress }) => (
   </svg>
 );
 
-// Reusable component for next slide preview
+//  component for next slide preview
 const NextSlidePreview = ({ nextSlide, progress, onClick }) => (
   <div className="absolute bottom-8 left-36 z-20">
     <div
@@ -135,7 +132,7 @@ const NextSlidePreview = ({ nextSlide, progress, onClick }) => (
   </div>
 );
 
-// Reusable component for main content container
+//  component for main content container
 const ContentContainer = ({ children }) => (
   <div className="relative z-10 h-full flex items-center">
     <div className="max-w-7xl mx-auto px-6 w-full">
@@ -152,23 +149,23 @@ const HeroSlider = () => {
   const [progressPercentage, setProgressPercentage] = useState(0);
   const [nextSlideIndex, setNextSlideIndex] = useState(1);
 
-  // Reusable function to calculate next slide index
+  //  function to calculate next slide index
   const calculateNextSlideIndex = useCallback((currentIndex) => {
     return (currentIndex + 1) % SLIDE_DATA.length;
   }, []);
 
-  // Reusable function to advance to next slide
+  //  function to advance to next slide
   const advanceToNextSlide = useCallback(() => {
     setCurrentSlideIndex(nextSlideIndex);
     setProgressPercentage(0);
   }, [nextSlideIndex]);
 
-  // Reusable function to handle manual slide navigation
+  //  function to handle manual slide navigation
   const handleManualSlideNavigation = useCallback(() => {
     advanceToNextSlide();
   }, [advanceToNextSlide]);
 
-  // Reusable function to update progress
+  //  function to update progress
   const updateProgress = useCallback((currentProgress) => {
     if (currentProgress >= 100) {
       advanceToNextSlide();
@@ -189,7 +186,6 @@ const HeroSlider = () => {
     return () => clearInterval(progressInterval);
   }, [currentSlideIndex, calculateNextSlideIndex, updateProgress]);
 
-  const currentSlide = SLIDE_DATA[currentSlideIndex];
   const nextSlide = SLIDE_DATA[nextSlideIndex];
 
   return (

@@ -41,7 +41,7 @@ const MAX_DRAG_OFFSET = 300;
 const ANIMATION_DURATION = '0.6s';
 const FADE_UP_DURATION = '0.8s';
 
-// Reusable component for individual slide
+//  component for individual slide
 const SlideCard = ({ 
   slide, 
   index, 
@@ -83,7 +83,7 @@ const SlideCard = ({
   );
 };
 
-// Reusable drag indicator component
+//  drag indicator component
 const DragIndicator = () => (
   <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none">
     <div className="bg-white/90 backdrop-blur-sm rounded-full px-4 py-2 shadow-lg">
@@ -92,7 +92,7 @@ const DragIndicator = () => (
   </div>
 );
 
-// Reusable card shadow component
+//  card shadow component
 const CardShadow = ({ isActive }) => (
   <div 
     className="absolute inset-0 rounded-2xl"
@@ -106,7 +106,7 @@ const CardShadow = ({ isActive }) => (
   />
 );
 
-// Reusable slide info component
+//  slide info component
 const SlideInfo = ({ slide, animationKey }) => (
   <div
     key={animationKey}
@@ -124,7 +124,7 @@ const SlideInfo = ({ slide, animationKey }) => (
   </div>
 );
 
-// Reusable header component
+//  header component
 const SectionHeader = () => (
   <div className="text-center md:mb-16">
     <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Quality Products</h2>
@@ -146,24 +146,24 @@ const ImageSlider = () => {
   const [slideInfoKey, setSlideInfoKey] = useState(0);
   const sliderContainerRef = useRef(null);
 
-  // Reusable function to get client position from event
+  //  function to get client position from event
   const getClientPosition = (event) => {
     return event.touches ? event.touches[0].clientX : event.clientX;
   };
 
-  // Reusable function to constrain drag offset
+  //  function to constrain drag offset
   const constrainDragOffset = (offset) => {
     return Math.max(-MAX_DRAG_OFFSET, Math.min(MAX_DRAG_OFFSET, offset));
   };
 
-  // Reusable function to handle drag start
+  //  function to handle drag start
   const handleDragStart = useCallback((event) => {
     setIsDragging(true);
     setDragStartPosition(getClientPosition(event));
     setDragOffset(0);
   }, []);
 
-  // Reusable function to handle drag move
+  //  function to handle drag move
   const handleDragMove = useCallback((event) => {
     if (!isDragging) return;
     const currentPosition = getClientPosition(event);
@@ -171,7 +171,7 @@ const ImageSlider = () => {
     setDragOffset(constrainDragOffset(offset));
   }, [isDragging, dragStartPosition]);
 
-  // Reusable function to handle drag end
+  //  function to handle drag end
   const handleDragEnd = useCallback(() => {
     if (!isDragging) return;
     
@@ -188,19 +188,19 @@ const ImageSlider = () => {
     resetDragState();
   }, [isDragging, dragOffset, currentIndex]);
 
-  // Reusable function to navigate to a specific slide
+  //  function to navigate to a specific slide
   const navigateToSlide = (newIndex) => {
     setCurrentIndex(newIndex);
     setSlideInfoKey(prev => prev + 1);
   };
 
-  // Reusable function to reset drag state
+  //  function to reset drag state
   const resetDragState = () => {
     setIsDragging(false);
     setDragOffset(0);
   };
 
-  // Reusable function to calculate slide transform styles
+  //  function to calculate slide transform styles
   const calculateSlideStyle = (index) => {
     const isActive = index === currentIndex;
     const isPrevious = index === currentIndex - 1;
